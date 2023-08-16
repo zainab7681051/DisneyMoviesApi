@@ -14,7 +14,9 @@ namespace DisneyMoviesApi.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "7.0.7");
+            modelBuilder
+                .UseCollation("NOCASE")
+                .HasAnnotation("ProductVersion", "7.0.7");
 
             modelBuilder.Entity("DisneyMoviesApi.Models.DisneyMovie", b =>
                 {

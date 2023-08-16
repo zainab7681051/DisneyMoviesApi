@@ -10,14 +10,16 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DisneyMoviesApi.Migrations
 {
     [DbContext(typeof(DisneyMoviesDbContext))]
-    [Migration("20230709200906_initialMigartion")]
-    partial class initialMigartion
+    [Migration("20230816190257_migration02")]
+    partial class migration02
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "7.0.7");
+            modelBuilder
+                .UseCollation("NOCASE")
+                .HasAnnotation("ProductVersion", "7.0.7");
 
             modelBuilder.Entity("DisneyMoviesApi.Models.DisneyMovie", b =>
                 {

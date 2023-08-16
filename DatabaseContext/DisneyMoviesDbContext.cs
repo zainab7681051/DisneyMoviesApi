@@ -20,6 +20,7 @@ public partial class DisneyMoviesDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.UseCollation("NOCASE");
         modelBuilder.Entity<DisneyMovie>(entity =>
         {
             entity.HasKey(e => e.MovieId);
@@ -39,8 +40,6 @@ public partial class DisneyMoviesDbContext : DbContext
             entity.Property(e => e.Year).HasColumnName("year");
         });
 
-        OnModelCreatingPartial(modelBuilder);
     }
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

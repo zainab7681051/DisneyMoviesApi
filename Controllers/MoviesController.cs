@@ -1,12 +1,11 @@
 using DisneyMoviesApi.DatabaseContext;
+using DisneyMoviesApi.Extensions;
 using DisneyMoviesApi.Models;
 using Microsoft.AspNetCore.Mvc;
-using DisneyMoviesApi.Extensions;
-using DisneyMoviesApi.DDos;
 
 namespace DisneyMoviesApi.Controllers;
 [ApiController]
-[Route("/")]
+[Route("/api/v1")]
 public class MoviesController : ControllerBase
 {
     private readonly DisneyMoviesDbContext context;
@@ -18,29 +17,40 @@ public class MoviesController : ControllerBase
         ilogger = _ilogger;
     }
 
-    [HttpGet]
-    public ActionResult<IEnumerable<MoviesWithLessDetail>> GetAllMovies()
+    [HttpGet("/api/v1/movies")]
+    public ActionResult<IEnumerable<MoviesWithLessDetail>> GetMoviesWithLessDetail()
     {
         ilogger.LogInformation("http get request return all movies");
-        var movies = context.DisneyMovies.Select(e => e.ToLessDetailDDo()).ToList();
+        var movies = context.DisneyMovies.Select(e => e.ToLessDetail()).ToList();
         if (movies is null) return NotFound();
         return movies;
     }
-    [HttpGet("{id}")]
+
+    [HttpGet("/api/v1/movies/all")]
+    public ActionResult<IEnumerable<DisneyMovie>> GetMovies()
+    {
+        ilogger.LogInformation("http get request return all movies");
+        var movies = context.DisneyMovies.ToList();
+        if (movies is null) return NotFound();
+        return movies;
+    }
+
+    [HttpGet("/api/v1/movies/{id}")]
     public ActionResult<MoviesWithLessDetail> GetOneMovie(int id)
     {
         ilogger.LogInformation($"http get request return one movie with id: {id}");
         var movie = context.DisneyMovies.Find(id);
         if (movie is null) return NotFound();
-        return movie.ToLessDetailDDo();
+        return movie.ToLessDetail();
     }
-    // [HttpGet("{query}")]
-    // public ActionResult<IEnumerable<MoviesWithLessDetail>> SearchMovies(string query)
-    // {
-    //     ilogger.LogInformation($"http get request query movies with query: {query}");
-    //     var movie = context.DisneyMovies.Where(e => e.Title!.Contains(query) || e.Year.Contains(query) || e.MovieId.ToString().Contains(query))
-    //     .Select(e => e.ToLessDetailDDo()).ToList();
-    //     if (movie is null ) return NotFound();
-    //     return movie;
-    // }
+
+    [HttpGet("/api/v1/search")]
+    public ActionResult<IEnumerable<MoviesWithLessDetail>> SearchMovies([FromQuery] string query)
+    {
+        ilogger.LogInformation($"http get request query movies with query: {query}");
+        var qMovies = context.DisneyMovies.Where(e => e.Title!.Contains(query) || e.Year.Contains(query) || e.MovieId.ToString().Contains(query))
+        .Select(e => e.ToLessDetail()).ToList();
+        if (qMovies is null || !qMovies.Any()) return NotFound();
+        return qMovies;
+    }
 }

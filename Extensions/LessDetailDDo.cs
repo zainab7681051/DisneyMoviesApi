@@ -1,10 +1,9 @@
-using DisneyMoviesApi.DDos;
 using DisneyMoviesApi.Models;
 
 namespace DisneyMoviesApi.Extensions;
-public static class LessDetailDDo
+public static class LessDetail
 {
-    public static MoviesWithLessDetail ToLessDetailDDo(this DisneyMovie movie)
+    public static MoviesWithLessDetail ToLessDetail(this DisneyMovie movie)
     {
         var Nmovie = new MoviesWithLessDetail()
         {

@@ -5,7 +5,7 @@
 namespace DisneyMoviesApi.Migrations
 {
     /// <inheritdoc />
-    public partial class initialMigartion : Migration
+    public partial class migration02 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

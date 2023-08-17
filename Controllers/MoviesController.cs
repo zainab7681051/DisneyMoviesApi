@@ -44,8 +44,17 @@ public class MoviesController : ControllerBase
         return movie.ToLessDetail();
     }
 
+    [HttpGet("/api/v1/movies/all/{id}")]
+    public ActionResult<DisneyMovie> GetOneMovieWithDetail(int id)
+    {
+        ilogger.LogInformation($"http get request return one movie with id: {id}");
+        var movie = context.DisneyMovies.Find(id);
+        if (movie is null) return NotFound();
+        return movie;
+    }
+
     [HttpGet("/api/v1/search")]
-    public ActionResult<IEnumerable<MoviesWithLessDetail>> SearchMovies([FromQuery] string query)
+    public ActionResult<IEnumerable<MoviesWithLessDetail>> SearchMovies([FromQuery] string query = "")
     {
         ilogger.LogInformation($"http get request query movies with query: {query}");
         var qMovies = context.DisneyMovies.Where(e => e.Title!.Contains(query) || e.Year.Contains(query) || e.MovieId.ToString().Contains(query))

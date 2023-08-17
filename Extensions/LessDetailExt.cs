@@ -1,7 +1,7 @@
 using DisneyMoviesApi.Models;
 
 namespace DisneyMoviesApi.Extensions;
-public static class LessDetail
+public static class LessDetailExt
 {
     public static MoviesWithLessDetail ToLessDetail(this DisneyMovie movie)
     {

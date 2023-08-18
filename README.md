@@ -113,7 +113,7 @@ GET /search?query={query}
     "image": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg",
     "rating": "8"
   },
-  // ... other movies
+... other movies
 ]
 ```
 ### Implementation

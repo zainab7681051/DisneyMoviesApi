@@ -172,5 +172,19 @@ fetch(`${baseUrl}/search?query=${query}`)
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
 ```
+
+### Build-It-Yourself
+#### reqiures .NET Core 7.0 sdk
+```
+git clone https://github.com/zainab7681051/DisneyMoviesApi/
+```
+```
+cd DisneyMoviesApi
+```
+```
+dotnet run
+```
+if you are not immediately redirected to the Swagger user interface page then append "/swagger/index.html/" to the url.
+
 ### Conclusion
 This API allows you to access information about Disney animation movies easily. Whether you're using .NET Core or Node.js, you can integrate this API into your projects to retrieve movie details, search for movies, and enhance your application with Disney movie data.

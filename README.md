@@ -17,11 +17,11 @@ GET /movies/all?deatils=false
 ```json 
 [
   {
-    movieId: 67,
-    title: 'Zootopia',
-    year: '(2016)',
-    image: 'https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg',
-    rating: '8'
+    "movieId": 67,
+    "title": "Zootopia",
+    "year": "(2016)",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg",
+    "rating": "8"
   },
   // ... other movies
 ]
@@ -36,18 +36,18 @@ GET /movies/all?details=true
 ```json 
 [
   {
-    movieId: 67,
-    title: 'Zootopia',
-    year: '(2016)',
-    link: '/title/tt2948356/?ref_=ttls_li_tt',
-    image: 'https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg',
-    runtime: '108 min',
-    genre: 'Animation, Adventure, Comedy',
-    summary: 'In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.',
-    rating: '8',
-    metascore: '78',
-    directors: 'Byron Howard, \nRich Moore, \nJared Bush',
-    stars: 'Ginnifer Goodwin, \nJason Bateman, \nIdris Elba, \nJenny Slate'
+    "movieId": 67,
+    "title": "Zootopia",
+    "year": "(2016)",
+    "link": "/title/tt2948356/?ref_=ttls_li_tt",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg",
+    "runtime": "108 min",
+    "genre": "Animation, Adventure, Comedy",
+    "summary": "In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.",
+    "rating": "8",
+    "metascore": "78",
+    "directors": "Byron Howard, \nRich Moore, \nJared Bush",
+    "stars": "Ginnifer Goodwin, \nJason Bateman, \nIdris Elba, \nJenny Slate"
   },
   // ... other movies
 ]
@@ -62,11 +62,11 @@ GET /movies/{id}?details=false
 ```json 
 [
   {
-    movieId: 67,
-    title: 'Zootopia',
-    year: '(2016)',
-    image: 'https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg',
-    rating: '8'
+    "movieId": 67,
+    "title": "Zootopia",
+    "year": "(2016)",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg",
+    "rating": "8"
   },
   // ... other movies
 ]
@@ -81,18 +81,18 @@ GET /movies/all/{id}?details=true
 ```json 
 [
   {
-    movieId: 67,
-    title: 'Zootopia',
-    year: '(2016)',
-    link: '/title/tt2948356/?ref_=ttls_li_tt',
-    image: 'https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg',
-    runtime: '108 min',
-    genre: 'Animation, Adventure, Comedy',
-    summary: 'In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.',
-    rating: '8',
-    metascore: '78',
-    directors: 'Byron Howard, \nRich Moore, \nJared Bush',
-    stars: 'Ginnifer Goodwin, \nJason Bateman, \nIdris Elba, \nJenny Slate'
+    "movieId": 67,
+    "title": "Zootopia",
+    "year": "(2016)",
+    "link": "/title/tt2948356/?ref_=ttls_li_tt",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg",
+    "runtime": "108 min",
+    "genre": "Animation, Adventure, Comedy",
+    "summary": "In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.",
+    "rating": "8",
+    "metascore": "78",
+    "directors": "Byron Howard, \nRich Moore, \nJared Bush",
+    "stars": "Ginnifer Goodwin, \nJason Bateman, \nIdris Elba, \nJenny Slate"
   },
   // ... other movies
 ]
@@ -107,11 +107,11 @@ GET /search?query={query}
 ```json 
 [
   {
-    movieId: 67,
-    title: 'Zootopia',
-    year: '(2016)',
-    image: 'https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg',
-    rating: '8'
+    "movieId": 67,
+    "title": "Zootopia",
+    "year": "(2016)",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg",
+    "rating": "8"
   },
   // ... other movies
 ]

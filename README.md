@@ -23,7 +23,7 @@ GET /movies/all?deatils=false
     "image": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg",
     "rating": "8"
   },
-  // ... other movies
+  // other movies ...
 ]
 ```
 #### Get All Movies With Details
@@ -49,7 +49,7 @@ GET /movies/all?details=true
     "directors": "Byron Howard, \nRich Moore, \nJared Bush",
     "stars": "Ginnifer Goodwin, \nJason Bateman, \nIdris Elba, \nJenny Slate"
   },
-  // ... other movies
+  // other movies ...
 ]
 ```
 #### Get Movie by ID
@@ -67,8 +67,7 @@ GET /movies/{id}?details=false
     "year": "(2016)",
     "image": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg",
     "rating": "8"
-  },
-  // ... other movies
+  }
 ]
 ```
 #### Get Movie by ID With Details
@@ -93,8 +92,7 @@ GET /movies/all/{id}?details=true
     "metascore": "78",
     "directors": "Byron Howard, \nRich Moore, \nJared Bush",
     "stars": "Ginnifer Goodwin, \nJason Bateman, \nIdris Elba, \nJenny Slate"
-  },
-  // ... other movies
+  }
 ]
 ```
 #### Search Movies
@@ -113,7 +111,7 @@ GET /search?query={query}
     "image": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_FMjpg_UX1000_.jpg",
     "rating": "8"
   },
-... other movies
+// other movies ...
 ]
 ```
 ### Implementation

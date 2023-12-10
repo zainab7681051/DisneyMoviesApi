@@ -2,7 +2,7 @@
 #### The Disney Animation Movies API allows you to retrieve information about Disney animation movies, including their title, runtime, IMDb page, rating, and more. 
 
 ### Base URL
-``` https://disneymoviesapi.bsite.net/api/v1 ```
+``` [https://disneymoviesapi.bsite.net/api/v1](https://apidisneymovies.bsite.net/api/v1/) ```
 
 
 ### Endpoints
@@ -126,7 +126,7 @@ class Program
     static async Task Main(string[] args)
     {
         using var client = new HttpClient();
-        var baseUrl = "https://disneymoviesapi.bsite.net/api/v1";
+        var baseUrl = "https://apidisneymovies.bsite.net/api/v1";
         bool details=false;
 
         // Get all movies with less details
@@ -150,7 +150,7 @@ class Program
 ```javascript 
 import fetch from 'node-fetch';
 
-const baseUrl = 'https://disneymoviesapi.bsite.net/api/v1';
+const baseUrl = 'https://apidisneymovies.bsite.net/api/v1/';
 
 // Get all movies
 fetch(`${baseUrl}/movies/all`)
